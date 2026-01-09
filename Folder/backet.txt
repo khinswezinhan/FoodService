@@ -1,0 +1,323 @@
+Site1.master
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="foodservice.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta charset="iso-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <%-- <link href="all.min.css" rel="stylesheet" />
+    <link href="fontawesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"  />--%>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <%--<link href="homemastercss.css" rel="stylesheet" />--%>
+    <script src="bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+  <form id="form1" runat="server">
+     <div style="background-image:url('10.jpg');background-size:cover;height:481px; margin-right: 0px;" >
+
+        
+    
+   
+
+        <nav class="navbar " >
+  <div class="container ">
+     <div class="d-flex"> 
+    <a class="navbar-brand">My logo</a>
+         <img src="12.jpg" class="navbar-brand" alt="flower" style="height:auto; width:50px"/>
+
+          <div class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <asp:Button ID="btnsearch" runat="server" Text="Search"  CssClass="btn btn-outline-danger"/> 
+              
+              
+          </div>
+      </div>
+      <div class="float-end" runat="server">
+     <a class="navbar-brand">Home</a>
+
+
+      <!-- Button trigger modal -->
+<button type="button" class="navbar-brand btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Login <%--<asp:Button ID="Button1" runat="server" Text="Login" class="navbar-brand btn btn-primary"/>--%>
+</button>
+<%--      <asp:Button ID="BtnOrder" runat="server" Text="order" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"/>--%>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Please,login.....</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        
+               
+          <fieldset>
+              <legend>Email</legend>
+          <div class="d-flex">
+          <asp:TextBox ID="txtemail" runat="server" ></asp:TextBox>  
+              <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Name is required" ControlToValidate="txtemail" CssClass="text-danger"></asp:RequiredFieldValidator>
+              <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="error email" ControlToValidate="txtemail" ValidationExpression="email"></asp:RegularExpressionValidator>
+              </div>
+          <legend>Password</legend>
+          <asp:TextBox ID="txtpassword" runat="server"></asp:TextBox>  
+           <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Password is required" ControlToValidate="txtpassword" CssClass="text-danger"></asp:RequiredFieldValidator><br />
+<%--           <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtpassword" MaximumValue="6" MinimumValue="3" ErrorMessage="Password is at least 6 characters" CssClass="text-danger"></asp:RangeValidator>--%>
+          </fieldset>
+        
+      </div>
+      <div class="modal-footer" id="btnlogin1">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+          
+          <asp:Button ID="btnlogin" runat="server" CssClass="btn btn-success" Text="Login" OnClick="btnlogin_Click"/>
+<%--          <button class="btn btn-success" id="btnlogin" OnClick="btnlogin_Click">login</button>--%>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <a class="navbar-brand">Log out</a>
+          </div>
+  </div>
+</nav>
+
+         
+        
+
+        <asp:Label ID="Label2" runat="server" CssClass="text-primary" Font-Names="Berlin Sans FB"><h3>Are you hungry?</h3></asp:Label>
+                 <asp:Label ID="Label1" runat="server" CssClass="text-primary" Font-Names="Berlin Sans FB"><h3>Don't Wait!</h3></asp:Label>
+                 <asp:Label ID="Label3" runat="server" CssClass="text-primary" Font-Italic="False" Font-Names="Berlin Sans FB"><h4>Let start to order food now</h4></asp:Label>
+
+         </div>
+      <div class="container">
+          <div class="row">
+            <div class="col-4 ">
+                      
+
+            </div>
+                          <div class="col-4 ">
+                      <div class="m-3 p-3" style="border-style: solid; border-color: inherit; width:149px;border-radius:20%">
+          <p class="text-danger">hello</p>
+           
+          <asp:Button ID="Button3" runat="server" Text="Button" CssClass="btn btn-primary" />
+
+      </div>
+
+            </div>
+
+                          <div class="col-4 ">
+                      
+            </div>
+
+          </div>
+      </div>
+     <div class="container p-2">
+         <div class="row ">
+             <div class="col-2">
+                
+               
+                 <asp:ImageButton ID="ImageButton1" runat="server" style="border-radius:50%" ImageUrl="~/37.jpg" Height="109px" Width="92px"/>
+                 <p>Street Foods</p>
+             </div>
+            
+             <div class="col-2">
+                <img src="flower1.jpg" style="height:75%;border-radius:50%"/>
+                 <p>Street Foods</p>
+             </div>
+
+         </div>
+        </div>
+      
+          
+     
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+    <%--<script>
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', () => {
+            myInput.focus()
+        })
+    </script>--%>
+     
+</form>
+</body>
+    
+</html>
+
+site1.master.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+
+namespace foodservice
+{
+    public partial class Site1 : System.Web.UI.MasterPage
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            
+        }
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["const"].ConnectionString);
+        protected void btnlogin_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            
+            
+            SqlCommand amd = new SqlCommand("select * from LoginTable where Email=@em1 and Password=@p1", conn);
+            amd.Parameters.AddWithValue("@em1", txtemail.Text);
+            amd.Parameters.AddWithValue("@p1", txtpassword.Text);
+            
+            SqlDataReader dr = amd.ExecuteReader();
+            if (dr.Read())
+
+            {
+
+                Response.Write("<script>alert('error')</script>");
+
+               
+            }    
+                
+                else
+            {
+                Session["email"] = txtemail.Text;
+                    dr.Close();
+                    SqlCommand cmd = new SqlCommand("insert into LoginTable (Email,Password) values(@e1,@e2)", conn);
+                    
+
+                    cmd.Parameters.AddWithValue("@e1", txtemail.Text);
+                    cmd.Parameters.AddWithValue("@e2", txtpassword.Text);
+                    cmd.ExecuteNonQuery();
+
+                    Response.Write("<script>alert('successful')</script>");
+                   
+                }
+            conn.Close();
+
+            }
+
+
+            
+            
+        }
+
+        
+       
+    }
+homemaster
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="homemaster.aspx.cs" Inherits="foodservice.homemaster" %>
+
+<asp:Content ID="Content1" runat="server" contentplaceholderid="ContentPlaceHolder1">
+    
+    
+     <h3>Popular food</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+   
+    <div class="card" style="width: 18rem;">
+  <img src="kiwi1.jpg" class="card-img-top" alt="flower"  style="width:auto;height:auto"/>
+  <div class="card-body">
+    <h5 class="card-title text-success">Kiwi Juice</h5>
+    <p class="card-text">Price:<span class="text-success">2000MMK</span></p>
+      
+<%--      <a id="btnorder"  class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">order</a>--%>
+<%--<button type="button" id="btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+Order
+</button>--%>
+      <asp:Button ID="Button1" runat="server" Text="order" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary" OnClick="Button1_Click"/>
+<%--      <asp:Button ID="BtnOrder" runat="server" Text="order" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"/>--%>
+    
+
+
+      </div>
+    </div>
+  
+</div>
+
+
+
+            <div class="col-4">
+ 
+    <div class="card" style="width: 18rem;">
+  <img src="12.jpg" class="card-img-top" alt="flower" style="width:auto;height:auto"/>
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">ကျော်လွင်ဉီး</a>
+  </div>
+</div></div>
+
+            <div class="col-4">
+    
+    <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div></div>
+
+        </div>
+        </div>
+
+    
+</asp:Content>
+
+homemastercs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+
+namespace foodservice
+{
+    public partial class homemaster : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (Session["email"] != null)
+            {
+                exampleModal.visible = false;
+            }
+            else
+            {
+                exampleModal.visible = true;
+            }
+
+        }
+    }
+}
